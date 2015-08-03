@@ -14,3 +14,4 @@ try {
     // Handle any exceptions
     echo 'Unknown Error';
 }
+echo PHP_EOL;

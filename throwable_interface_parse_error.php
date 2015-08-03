@@ -9,3 +9,4 @@ try {
     // Handle $error
     echo 'Sorry ... parse error';
 }
+echo PHP_EOL;

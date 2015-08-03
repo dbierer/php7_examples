@@ -1,7 +1,7 @@
 <?php
-echo '1<=>2', 1<=>2, PHP_EOL; // -1
-echo '1<=>1', 1<=>1, PHP_EOL; // 0
-echo '2<=>1', 2<=>1, PHP_EOL; // 1
+echo '1<=>2: ', 1<=>2, PHP_EOL; // -1
+echo '1<=>1: ', 1<=>1, PHP_EOL; // 0
+echo '2<=>1: ', 2<=>1, PHP_EOL; // 1
 
 echo 'Inputs: ' . PHP_EOL;
 var_dump($argv);
