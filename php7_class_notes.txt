@@ -1,0 +1,46 @@
+PHP 7 NOTES
+
+REF:  https://github.com/php/php-src/blob/php-7.0.0beta2/NEWS
+REF:  https://github.com/php/php-src/blob/php-7.0.0beta2/UPGRADING
+REPO: https://github.com/dbierer/php7_examples.git
+
+***** NEW ***********************************************************************
+
+FEATURES:
+
+\u{xxxxx} Unicode Codepoint Escape Syntax
+error_clear_last()
+zend_sort ???
+SEARCH WebDav method
+"v" DateTime format modifier to get the 3-digit version of fraction of seconds
+experimental (disabled by default) file based opcode cache
+"alpn_protocols" SSL context option allowing encrypted client/server streams to negotiate alternative protocols using the ALPN TLS extension when built against OpenSSL 1.0.2 or newer.
+wifcontinued()
+wcontinued()
+ReflectionGenerator class
+Zlib::deflate_init(), deflate_add(), inflate_init(), inflate_add() functions allowing incremental/streaming compression/decompression
+        
+OPERATORS:
+
+??
+$a <=> $b -- combined comparison ("spaceship") operator; returns -1, 0 or 1
+
+
+CONSTANTS:
+
+PHP_INT_MIN
+DateTime::RFC3339_EXTENDED to output in RFC3339 Extended format which includes fraction of seconds
+    
+
+***** IMPROVED ******************************************************************
+
+pcntl_wait() and pcntl_waitpid() -- Added rusage support        
+NULL byte protection to exec, system and passthru
+unserialize() -- Added options parameter for  allowing to specify acceptable classes
+Closure::call() method
+Reflection support for return types and type declarations.
+getrusage() -- Added Windows support
+ZipArchive -- added setCompressionName() and setCompressionIndex() methods
+
+
+***** REMOVED *******************************************************************
