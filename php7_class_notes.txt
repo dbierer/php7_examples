@@ -1,5 +1,14 @@
 PHP 7 NOTES
 
+NOTES ON PHP7_CLASS.PDF
+---------------------------------------------------------------------------------
+replaced "json" extension with "jsond"
+-- see: https://wiki.php.net/rfc/jsond
+-- old extension: old, no maintainer, not a free license
+-- benchmarks: https://github.com/bukka/php-jsond-bench/blob/master/reports/0001/summary.md
+        
+
+
 REF:  https://github.com/php/php-src/blob/php-7.0.0beta2/NEWS
 REF:  https://github.com/php/php-src/blob/php-7.0.0beta2/UPGRADING
 REPO: https://github.com/dbierer/php7_examples.git
@@ -19,7 +28,7 @@ wifcontinued()
 wcontinued()
 ReflectionGenerator class
 Zlib::deflate_init(), deflate_add(), inflate_init(), inflate_add() functions allowing incremental/streaming compression/decompression
-        
+
 OPERATORS:
 
 ??
