@@ -1,5 +1,15 @@
 PHP 7 NOTES
 
+NOTES FROM CAL'S PRESENTATION
+---------------------------------------------------------------------------------
+Get link to MWOP's video on PSR-7
+History of PHP
+Auto-vivification
+-- automatic creation of new arrays and hashes as required every time an undefined value is dereferenced. 
+Dereferencing
+-- indirection (?)
+-- obtaining a value
+
 NOTES ON PHP7_CLASS.PDF
 ---------------------------------------------------------------------------------
 replaced "json" extension with "jsond"
@@ -9,8 +19,8 @@ replaced "json" extension with "jsond"
         
 
 
-REF:  https://github.com/php/php-src/blob/php-7.0.0beta2/NEWS
-REF:  https://github.com/php/php-src/blob/php-7.0.0beta2/UPGRADING
+REF:  https://github.com/php/php-src/blob/php-7.0.0beta3/NEWS
+REF:  https://github.com/php/php-src/blob/php-7.0.0beta3/UPGRADING
 REPO: https://github.com/dbierer/php7_examples.git
 
 ***** NEW ***********************************************************************

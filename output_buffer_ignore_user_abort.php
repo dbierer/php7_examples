@@ -8,6 +8,8 @@ for($lcvA=1;$lcvA<10;$lcvA++) {
     echo $lcvA . ",";
 }
 
+ob_flush();
+
 function make_fizbuzz ($buffer) {
     $buffer_as_array = explode(',',$buffer);
     $payload = '';
