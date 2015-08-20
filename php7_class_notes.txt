@@ -9,6 +9,8 @@ Auto-vivification
 Dereferencing
 -- indirection (?)
 -- obtaining a value
+Abstract Syntax Tree
+-- decouples the parsing from the compiling aspect in the interpreter
 
 NOTES ON PHP7_CLASS.PDF
 ---------------------------------------------------------------------------------
