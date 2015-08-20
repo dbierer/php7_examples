@@ -3,8 +3,6 @@
 
 list($array[], $array[], $array[]) = [1, 2, 3];
 
-var_dump($array);
-
 // OLD: $array = [3, 2, 1]
 // NEW: $array = [1, 2, 3]
 
@@ -12,6 +10,8 @@ try {
     list() = $a;           // INVALID
 } catch (\Error $e) {
     echo $e->getMessage() . PHP_EOL;
+} finally {
+	var_dump($array);
 }
 
 try {
