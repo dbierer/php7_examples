@@ -10,7 +10,9 @@ Dereferencing
 -- indirection (?)
 -- obtaining a value
 Abstract Syntax Tree
+-- https://wiki.php.net/rfc/abstract_syntax_tree
 -- decouples the parsing from the compiling aspect in the interpreter
+-- the AST based implementation is 10-15% faster, but requires more memory (from 10% to 70% more depending on file size)
 
 NOTES ON PHP7_CLASS.PDF
 ---------------------------------------------------------------------------------
