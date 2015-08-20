@@ -1,11 +1,11 @@
 <?php 
 // changes to list()
 
-foreach (range('A', 'C') as $key) {
-	$array[$key] = range(1, 3);
+foreach (range(0, 2) as $key) {
+	$array[$key] = range('A', 'C');
 }
 
-list(list($a, $b)) = $array;
+list(list($a, $b, $c, $d, $e)) = $array;
 
 var_dump($array);
 var_dump($a, $b);
