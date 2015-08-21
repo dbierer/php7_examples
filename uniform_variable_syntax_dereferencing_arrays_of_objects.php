@@ -1,10 +1,8 @@
 <?php
-class Test
-{
-	public $prop = 'TEST';
-}
 
-$obj1 = new Test();
-$obj2 = new Test();
+$obj1 = new stdClass();
+$obj1->name = 'Joe';
+$obj2 = new stdClass();
+$obj2->name = 'Fred';
 
-echo [$obj1, $obj2][0]->prop;
+echo [$obj1, $obj2][0]->name;

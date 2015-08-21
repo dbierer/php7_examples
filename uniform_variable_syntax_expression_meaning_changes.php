@@ -9,12 +9,13 @@ $foo->$bar['bat']()     $foo->{$bar['bat']}()     ($foo->$bar)['bat']()
 Foo::$bar['ban']()      Foo::{$bar['ban']}()      (Foo::$bar)['ban']()
 */
 
-$abc = 'ABC';
-$foo['bar']['baz'] = 'abc';
+$foo['bar']['baz'] = 'php5';
+$php5 = 'PHP5';
+$php7 = 'PHP7';
 
 // old meaning            // new meaning
 // ${$foo['bar']['baz']}     ($$foo)['bar']['baz']
-echo $$foo['bar']['baz'];
+var_dump($$foo['bar']['baz']);
 echo PHP_EOL;
 
 class Foo
@@ -39,9 +40,10 @@ $foo = new Foo();
 // old meaning            // new meaning
 // $foo->{$bar['baz']}       ($foo->$bar)['baz']
 //echo $foo->$bar['baz'];
-echo $foo->$bar['baz'];
+var_dump($foo->$bar['baz']);
 echo PHP_EOL;
 
+/*
 // old meaning            // new meaning
 // $foo->{$bar['bat']}()     ($foo->$bar)['bat']()
 try {
@@ -54,3 +56,4 @@ echo PHP_EOL;
 // old meaning            // new meaning
 // Foo::{$bar['ban']}()      (Foo::$bar)['ban']()
 echo Foo::$bar['ban']();
+*/
