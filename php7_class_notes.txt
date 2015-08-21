@@ -4,6 +4,11 @@ NOTES FROM CAL'S PRESENTATION
 ---------------------------------------------------------------------------------
 Get link to MWOP's video on PSR-7
 History of PHP
+RFC's
+-- Funny ones!
+-- New protocol: HTCPCP: https://www.ietf.org/rfc/rfc2324.txt
+-- TCP over Carrier Pigeon: https://www.ietf.org/rfc/rfc1149.txt
+-- https://wiki.php.net/rfc#php_70
 Auto-vivification
 -- automatic creation of new arrays and hashes as required every time an undefined value is dereferenced. 
 Dereferencing
@@ -15,7 +20,9 @@ Abstract Syntax Tree
 -- the AST based implementation is 10-15% faster, but requires more memory (from 10% to 70% more depending on file size)
 Uniform Variable Syntax
 -- https://wiki.php.net/rfc/uniform_variable_syntax
-
+ZPP Failure on Overflow
+-- https://wiki.php.net/rfc/zpp_fail_on_overflow
+-- If this happens, in php 7, an E_WARNING occurs ... which now generates an error which will stop the code
 
 NOTES ON PHP7_CLASS.PDF
 ---------------------------------------------------------------------------------
