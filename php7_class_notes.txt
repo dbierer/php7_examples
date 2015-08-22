@@ -4,6 +4,11 @@ NOTES FROM CAL'S PRESENTATION
 ---------------------------------------------------------------------------------
 Get link to MWOP's video on PSR-7
 History of PHP
+
+---------------------------------------------------------------------------------
+BACKWARDS COMPATIBILITY BREAKS: things which could break your code
+---------------------------------------------------------------------------------
+
 RFC's
 -- Funny ones!
 -- New protocol: HTCPCP: https://www.ietf.org/rfc/rfc2324.txt
@@ -23,6 +28,48 @@ Uniform Variable Syntax
 ZPP Failure on Overflow
 -- https://wiki.php.net/rfc/zpp_fail_on_overflow
 -- If this happens, in php 7, an E_WARNING occurs ... which now generates an error which will stop the code
+foreach behavior
+-- https://wiki.php.net/rfc/php7_foreach
+Dead / unmaintained extensions
+Dead SAPIs: 
+• aolserver
+• apache		// NOTHING to do with PHP Apache Module!!!
+• apache_hooks
+• caudium
+• continuity
+• isapi
+• milter 
+• phttpd
+• pi3web
+• roxen
+• thttpd
+• tux
+• webjames
+• apache2filter - not really dead, but currently broken
+• nsapi
+Extensions with unmaintained dependencies 
+• imap
+• mcrypt		// OLD mcrypt ... not the newer extension
+Extensions not yet ported to PHP7 
+• interbase
+• mssql
+• oci8
+• pdo_dblib
+• pdo_oci
+• sybase_ct
+
+
+---------------------------------------------------------------------------------
+HIGH IMPACT RFCs: new tools ... the *fun stuff*
+---------------------------------------------------------------------------------
+Moving phpng branch into master
+-- https://wiki.php.net/rfc/phpng
+-- concern over Facebook initiatives
+---- HPHPc: "transpiler" for PHP (https://en.wikipedia.org/wiki/HipHop_for_PHP)
+---- "hack" -- backward compatible version of PHP developed by Facebook
+---- http://hacklang.org/
+-- nearly 100% compatible and provides anywhere between 20% and 110% performance gains 
+-- Drupal shown on benchmark slide is version 7
 
 NOTES ON PHP7_CLASS.PDF
 ---------------------------------------------------------------------------------

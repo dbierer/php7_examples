@@ -1,24 +1,64 @@
 <?php
-echo '1<=>2: ', 1<=>2, PHP_EOL; // -1
-echo '1<=>1: ', 1<=>1, PHP_EOL; // 0
-echo '2<=>1: ', 2<=>1, PHP_EOL; // 1
 
-echo 'Inputs: ' . PHP_EOL;
-var_dump($argv);
-$a = (isset($argv[1])) ? (float) $argv[1] : 0;
-$b = (isset($argv[2])) ? (float) $argv[2] : 0;
-switch ($a <=> $b) {
-    case -1 :
-        echo "$a is less than $b";
-        break;
-    case 0 :
-        echo "$a is equal to $b";
-        break;
-
-    case 1 :
-        echo "$a is greater than $b";
-        break;
-    default :
-        echo 'Unknown';
-}
+// Integers
+echo 1 <=> 1; // 0
+echo PHP_EOL;
+echo 1 <=> 2; // -1
+echo PHP_EOL;
+echo 2 <=> 1; // 1
+echo PHP_EOL;
+ 
+// Floats
+echo 1.5 <=> 1.5; // 0
+echo PHP_EOL;
+echo 1.5 <=> 2.5; // -1
+echo PHP_EOL;
+echo 2.5 <=> 1.5; // 1
+echo PHP_EOL;
+ 
+// Strings
+echo "a" <=> "a"; // 0
+echo PHP_EOL;
+echo "a" <=> "b"; // -1
+echo PHP_EOL;
+echo "b" <=> "a"; // 1
+echo PHP_EOL;
+ 
+echo "a" <=> "aa"; // -1
+echo PHP_EOL;
+echo "zz" <=> "aa"; // 1
+echo PHP_EOL;
+ 
+// Arrays
+echo [] <=> []; // 0
+echo PHP_EOL;
+echo [1, 2, 3] <=> [1, 2, 3]; // 0
+echo PHP_EOL;
+echo [1, 2, 3] <=> []; // 1
+echo PHP_EOL;
+echo [1, 2, 3] <=> [1, 2, 1]; // 1
+echo PHP_EOL;
+echo [1, 2, 3] <=> [1, 2, 4]; // -1
+echo PHP_EOL;
+ 
+// Objects
+$a = (object) ["a" => "b"]; 
+$b = (object) ["a" => "b"]; 
+echo $a <=> $b; // 0
+echo PHP_EOL;
+ 
+$a = (object) ["a" => "b"]; 
+$b = (object) ["a" => "c"]; 
+echo $a <=> $b; // -1
+echo PHP_EOL;
+ 
+$a = (object) ["a" => "c"]; 
+$b = (object) ["a" => "b"]; 
+echo $a <=> $b; // 1
+echo PHP_EOL;
+ 
+// only values are compared
+$a = (object) ["a" => "b"]; 
+$b = (object) ["b" => "b"]; 
+echo $a <=> $b; // 0
 echo PHP_EOL;
