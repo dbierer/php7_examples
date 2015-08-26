@@ -83,6 +83,8 @@ Scalar Type Hinting
 -- This has to be at the top of EACH FILE where you want strict typing!!!
 -- This is a compromise: it allows you to mix strictly type-hinted code with non-strict
 -- It cannot be set globally: must be PER FILE
+Native TLS
+-- TLS =  thread-local-storage 
 
 ---------------------------------------------------------------------------------
 HIGH IMPACT RFCs: new tools ... the *fun stuff*
