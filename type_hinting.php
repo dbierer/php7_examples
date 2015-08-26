@@ -2,15 +2,9 @@
 // shows basic type hinting for scalars
 
 // this line has to be enabled for type hinting to work!
-// must be the 1st line (well ... after comments anyhow)
-declare(strict_types=1);
+// declare(strict_types=1);
 
-// NOTE: can't be done globally ... unless you're willing to fool around with
-//       the "auto_prepend_file" php.ini setting, and add something like this:
-//       <?php declare(strict_types=1); ? >
-
-// you can also type hint the return type!
-function add(float $a, float $b): float
+function add(float $a, float $b)
 {
 	return $a + $b;
 }

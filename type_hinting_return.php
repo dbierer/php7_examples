@@ -1,53 +1,14 @@
 <?php
-/*
-1: Strict Type Hinting
+// data type the return value
 
+// NOTE: this works even if "declare(strict_types=1);" is missing!
 
-
-
-<?php
-
-
-
-
-$needProcessing = strlen($name);
-
-
-
-
-doTheDeed($needsProcessing, $name);
-
-
-
-
-function (bool $needsProcessing, string $name) 
-
+function foo($a): array 
 {
-
-    $returnValue = $name;
-
-   if ($needsProcessing) {
-
-     $retrunValue = strrev($name);
-
-    }
-
-
-
-
-    return $returnValue;
-
+	return $a;
 }
 
+// these could be placed in try {} catch (TypeError $e) {}
 
-
-
-Ok, we’ve all written code like this where we assume a positive value is true and a 0 is false. However if strict type hinting is turned on, this will fail. This will trip people up. Nothing is auto-cast except for widening.
-
-
-
-
-2: Return Type Hinting
-
-It is NOT dependent on declare() statement. if you define it, it HAS to match, period.
-*/
+var_dump(foo([1,2,3]));
+var_dump(foo('test'));

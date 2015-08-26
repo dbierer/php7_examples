@@ -6,9 +6,9 @@ class Test
     public function doSomething($obj) {
         $obj->nope();
     }
-    public function __destroy()
+    public function __destruct()
     {
-        echo "Destroy called\n";
+        echo "DESTRUCT called\n";
     }
 }
 
@@ -16,9 +16,9 @@ try {
     $a = new Test();
     $a->doSomething(NULL);
 } catch (\Error $e) {
-    echo "Error: {$e->getMessage()}\n";
+    echo "ERROR: {$e->getMessage()}\n";
 } finally {
-    echo "Finally is called\n";
+    echo "FINALLY is called\n";
 }
 
     

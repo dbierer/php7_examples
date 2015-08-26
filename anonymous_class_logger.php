@@ -32,15 +32,15 @@ class Test
 			{
 				return file_get_contents($this->logFile);
 			}
-		}
+		};
 	}
 }
 
 $test = new Test();
 $test->setLogFile(__DIR__ . '/test.log');
-$test->getLogger()->log('TEST1: ' . date('Y-m-d H:i:s'));
+$test->getLogger()->log('TEST1: ' . date('Y-m-d H:i:s') . PHP_EOL);
 
 $logger = $test->getLogger();
-$logger->log('TEST2: ' . date('Y-m-d H:i:s'));
+$logger->log('TEST2: ' . date('Y-m-d H:i:s') . PHP_EOL);
 
 echo $logger->readLog();
