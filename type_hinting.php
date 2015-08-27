@@ -1,8 +1,6 @@
 <?php
 // shows basic type hinting for scalars
-
-// this line has to be enabled for type hinting to work!
-// declare(strict_types=1);
+declare(strict_types=1);
 
 function add(float $a, float $b)
 {

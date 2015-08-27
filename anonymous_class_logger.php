@@ -38,9 +38,9 @@ class Test
 
 $test = new Test();
 $test->setLogFile(__DIR__ . '/test.log');
-$test->getLogger()->log('TEST1: ' . date('Y-m-d H:i:s') . PHP_EOL);
+$test->getLogger()->log('TEST1: ' . date('Y-m-d H:i:s'));
 
 $logger = $test->getLogger();
-$logger->log('TEST2: ' . date('Y-m-d H:i:s') . PHP_EOL);
+$logger->log('TEST2: ' . date('Y-m-d H:i:s'));
 
 echo $logger->readLog();

@@ -28,7 +28,7 @@ $pos          = 1;
 echo $gettysBurg->current();
 for ($x = 0; $x < 20; $x++) {
 	$gettysBurg->next();
-	echo $gettysBurg->current() . ' ';
+	echo $gettysBurg->current();
 }
 echo PHP_EOL . 'Count: ' . $gettysBurg->getReturn();
 		

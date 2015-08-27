@@ -57,34 +57,7 @@ Extensions not yet ported to PHP7
 • pdo_dblib
 • pdo_oci
 • sybase_ct
-Filtered Serialize
--- why do it? -- good question!
--- why whitelist? -- better approach than blacklist
-Exceptions / Errors / Throwable
--- NOTE: in certain circumstances, an "Error" is *thrown*
--- Not the same as an exception, but is in the same "level"
--- DO NOT try to recover after an error: engine is unstable!!!
--- All methods from Exception are now in Throwable 
--- *Cannot* just implement Throwable in your classes and expect it to do something
-Easy Userland CSPRNG
--- Crytographically Secure Pseudo Random Number Generator
--- "Number" is not always a number: could be a key or a hash
--- Diff betw/ rand() and random_int() is the latter uses the OS pseudo-random functionality
-   whereas rand() uses PHP ... which means its output can be predicted
--- these are wrappers for /dev/random or /dev/urandom
--- *highly* recommended: once you've adopted php7, replace all rand() with random_int()
-NULL Coalesce Operator
--- Similar to the compressed ternary operator ?:
--- Is safe to use: don't need to run isset() 1st!
--- Like MySQL COALESCE() function, which returns the first non-NULL value of a list, or NULL if there are no non-NULL values.
--- Only op in PHP where you won't get a NOTICE for undefined variable
-Scalar Type Hinting
--- Doesn't work unless "declare(strict_types=1)" is defined
--- This has to be at the top of EACH FILE where you want strict typing!!!
--- This is a compromise: it allows you to mix strictly type-hinted code with non-strict
--- It cannot be set globally: must be PER FILE
-Native TLS
--- TLS =  thread-local-storage 
+
 
 ---------------------------------------------------------------------------------
 HIGH IMPACT RFCs: new tools ... the *fun stuff*

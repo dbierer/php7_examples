@@ -13,7 +13,7 @@ var_dump((int)INF);
 try {
     var_dump(1 << -2);
 } catch (ArithmeticError $e) {
-	echo 'ERROR: ' . $e->getMessage() . PHP_EOL;
+	echo $e->getMessage() . PHP_EOL;
 }
 
 // Was: int(8)

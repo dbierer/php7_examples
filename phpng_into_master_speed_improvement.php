@@ -1,6 +1,7 @@
 <?php
 // speed improvements
 
+ob_start();
 $loop  = 20;
 $start = microtime(TRUE);
 for ($x = 0; $x < $loop; $x++) {
@@ -24,3 +25,4 @@ for ($x = 0; $x < $loop; $x++) {
 $stop = microtime(TRUE);
 
 printf("\nStart:  %.8f\nStop:   %.8f\nElapsed: %.8f\n", $start, $stop, $stop - $start);
+ob_end_flush();

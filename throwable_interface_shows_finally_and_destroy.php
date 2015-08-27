@@ -8,7 +8,7 @@ class Test
     }
     public function __destruct()
     {
-        echo "DESTRUCT called\n";
+        echo "Destroy called\n";
     }
 }
 
@@ -16,9 +16,9 @@ try {
     $a = new Test();
     $a->doSomething(NULL);
 } catch (\Error $e) {
-    echo "ERROR: {$e->getMessage()}\n";
+    echo "Error: {$e->getMessage()}\n";
 } finally {
-    echo "FINALLY is called\n";
+    echo "Finally is called\n";
 }
 
     

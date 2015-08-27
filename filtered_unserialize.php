@@ -12,6 +12,6 @@ var_dump(unserialize($serialized['foo'], ['allowed_classes' => FALSE]));
 // works OK
 var_dump(unserialize($serialized['foo'], ['allowed_classes' => ['Foo','Bar']]));
 
-// __PHP__Incomplete_Class
+// error
 var_dump(unserialize($serialized['baz'], ['allowed_classes' => ['Foo','Bar']]));
 
