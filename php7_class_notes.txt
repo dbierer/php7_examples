@@ -1,5 +1,19 @@
 PHP 7 NOTES
 
+NEW STUFF IN RC3
+---------------------------------------------------------------------------------
+See: https://github.com/php/php-src/blob/php-7.0.0RC3/UPGRADING
+1. Globals: global_only_takes_simple_variable.php
+2. Changed functions: changed_functions*.php
+3. Changes in substr(): possible BC break!!! see: changed_functions_substr.php
+4. Context Sensitive Lexer
+   see: https://wiki.php.net/rfc/context_sensitive_lexer
+   context_sensitive_lexer*.php
+5. intdiv() and "%%" operator
+   see: http://php.net/manual/en/function.intdiv.php
+   intdiv_example.php
+   
+
 NOTES FROM CAL'S PRESENTATION
 ---------------------------------------------------------------------------------
 Get link to MWOP's video on PSR-7

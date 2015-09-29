@@ -1,19 +1,12 @@
 <?php 
 // changes to list()
 
-try {
-    list() = $a;           // INVALID
-} catch (\Error $e) {
-    echo $e->getMessage() . PHP_EOL;
-} finally {
-	var_dump($array);
-}
+list() = $a;           
+list(,,) = $a;
+list($x, list(), $y) = $a;
+list($b, list()) = $a; 
 
-try {
-    list($b, list()) = $a; // INVALID
-} catch (\Error $e) {
-    echo $e->getMessage() . PHP_EOL;
-}
+var_dump($x, $b);
 
 /*
 try {
