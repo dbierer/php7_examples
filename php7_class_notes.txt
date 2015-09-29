@@ -17,6 +17,8 @@ See: https://github.com/php/php-src/blob/php-7.0.0RC3/UPGRADING
 NOTES FROM CAL'S PRESENTATION
 ---------------------------------------------------------------------------------
 Get link to MWOP's video on PSR-7
+-- http://www.php-fig.org/psr/psr-7/
+
 History of PHP
 
 ---------------------------------------------------------------------------------
@@ -41,6 +43,7 @@ Uniform Variable Syntax
 -- https://wiki.php.net/rfc/uniform_variable_syntax
 ZPP Failure on Overflow
 -- https://wiki.php.net/rfc/zpp_fail_on_overflow
+-- ZPP = zend_parse_parameters
 -- If this happens, in php 7, an E_WARNING occurs ... which now generates an error which will stop the code
 foreach behavior
 -- https://wiki.php.net/rfc/php7_foreach

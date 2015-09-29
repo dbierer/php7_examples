@@ -11,7 +11,7 @@ class Test
 
 class Foo
 {
-	public static $test = 'Works in PHP 5 or 7';
+	public static $test = 'Test';
 	public function bar()
 	{
 		return self::$test;

@@ -22,6 +22,6 @@ var_dump((int) '0x123' == (int) '291'); // FALSE
 echo PHP_EOL;
 
 // testing
-$hex = filter_var(('0x123', FILTER_VALIDATE_INT, FILTER_FLAG_ALLOW_HEX);
+$hex = filter_var('0x123', FILTER_VALIDATE_INT, FILTER_FLAG_ALLOW_HEX);
 var_dump($hex);
 echo PHP_EOL;

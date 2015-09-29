@@ -9,6 +9,7 @@ foreach ($a as $v) {
 	printf("%2d\n", $v);
 	unset($a[1]);
 }
+var_dump($a);
 
 echo PHP_EOL;
 echo "AFTER assignment\n";
@@ -21,4 +22,5 @@ foreach ($a as $v) {
 	printf("%2d\n", $v);
 	unset($a[1]);
 }
+var_dump($a);
 

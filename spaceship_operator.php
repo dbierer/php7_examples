@@ -40,6 +40,8 @@ echo [1, 2, 3] <=> [1, 2, 1]; // 1
 echo PHP_EOL;
 echo [1, 2, 3] <=> [1, 2, 4]; // -1
 echo PHP_EOL;
+echo [1, 2, 3] <=> [1, 1, 4]; // 1
+echo PHP_EOL;
  
 // Objects
 $a = (object) ["a" => "b"]; 
