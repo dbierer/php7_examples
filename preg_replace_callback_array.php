@@ -10,9 +10,14 @@ $objects = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($lib),
 foreach($objects as $name => $fileObj){
     // this is the filename
     if ($fileObj->isFile()) {
-        echo 'BEFORE: ' . PHP_EOL;
-        $contents = read($name);
-
+        preg_replace_callback_array(
+            [
+                'preg_replace\(\'(.*?)\'\)' => function ($match) {
+                    echo strlen($match[0]), ' matches for "a" found', PHP_EOL;
+                },
+            ],
+            read($name)
+        );
 
     }
 }
