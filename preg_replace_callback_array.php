@@ -12,25 +12,23 @@ foreach($objects as $name => $fileObj){
     // this is the filename
     if ($fileObj->isFile()) {
         $contents = file($name);
-        if (preg_replace('!/e!', $contents)) {
             echo 'Processing: ' . $name . PHP_EOL;
             preg_replace_callback_array(
                 [
                     // 1   2                 3          4        5
-                    "!(.*)(preg_replace)\(\'(.*?\/e)\',(\".*?\")(.*)!" => function ($match) {
-                        return  $match[1] 
-                                . "preg_replace('" 
+                    "!(.*)(preg_replace)\(\'\/(.*?\/e)\/\',(\".*?\")(.*)!" => function ($match) {
+                        echo $match[0] . PHP_EOL;
+                        $replace = $match[1] 
+                                . "preg_replace_callback('/" 
                                 . substr($match[3], 0, -1) 
-                                . "',"
-                                . function ($a) { return chr(hexdec($a)); }
+                                . "/',"
+                                . 'function ($a) { return chr(hexdec($a)); },'
                                 . $match[5] . PHP_EOL;
+                        echo $replace . PHP_EOL;
                     },
                 ],
-                $contents, 
+                $contents 
             );
-            $fn = sprintf('%s/temp_%04d.php', __DIR__, $count++);
-            file_put_contents($fn, $contents);
-        }
     }
 }
 
