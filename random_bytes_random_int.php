@@ -16,9 +16,9 @@ echo $str . ' : ' . $hex . PHP_EOL;
 $test = array();
 
 printf("\n%20s : %20s\n", 'random_int()', 'rand()'); 
-for ($x = 0; $x < 20; $x++) {
+for ($x = 0; $x < 100; $x++) {
 	// random_int(int min, int max);
-	printf("%20d : %20d\n", random_int(0, 127), rand(0, 127));
+	printf("%20d : %20d\n", random_int(1, 3), rand(1, 3));
 }
 
 echo '</pre>';
