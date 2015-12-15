@@ -1,9 +1,9 @@
-<?php 
+<?php
 // callable returns an array ... can dereference any element immediately
 
 class Foo
 {
-    const FOO_FORMAT = 'Y-m-d H:i:s'; 
+    const FOO_FORMAT = 'Y-m-d H:i:s';
     public function bar()
     {
         return function () {
@@ -15,3 +15,5 @@ class Foo
 
 $foo = new Foo();
 echo $foo->bar()()[3];
+// OR
+new Foo()->bar()()[3];
