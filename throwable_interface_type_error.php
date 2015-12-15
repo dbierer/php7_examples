@@ -1,5 +1,8 @@
 <?php
 // throwable interface: TypeError
+// TODO:
+// from Chris Langton to All Participants:
+// declaring a class name again cant be caught it seems
 
 function add(int $left, int $right) {
     return $left + $right;
