@@ -1,4 +1,5 @@
 <?php
+// TODO: see wuzzup!
 // example of the effect of the abstract syntax tree rework
 
 $foo_1 = array();
@@ -12,10 +13,10 @@ var_dump($foo_1);
 
 class Test
 {
-	public function bar()
-	{
-		return "TEST\n";
-	}
+    public function bar()
+    {
+        return "TEST\n";
+    }
 }
 
 // conventional syntax

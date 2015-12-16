@@ -1,4 +1,4 @@
-<?php 
+<?php
 // reclassified E_STRICT notices
 ini_set('error_reporting', 1);
 error_reporting(E_ALL|E_STRICT);
@@ -20,3 +20,6 @@ class UserController extends BaseController
 }
 
 $u = new UserController;
+
+echo PHP_EOL;
+echo $a;
