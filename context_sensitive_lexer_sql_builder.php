@@ -1,7 +1,6 @@
 <?php
 // context sensitive lexer
 // see: https://wiki.php.net/rfc/context_sensitive_lexer
-// don't need to return self::$instance
 
 class Finder
 {
@@ -11,34 +10,42 @@ class Finder
     {
         self::$instance  = new Finder();
         self::$instance->sql = 'SELECT * FROM ' . $a;
+        return self::$instance;
     }
     public function where($a)
     {
         self::$instance->sql .= ' WHERE ' . $a;
+        return self::$instance;
     }
     public function like($a)
     {
         self::$instance->sql .= ' LIKE ' . $a;
+        return self::$instance;
     }
     public function and($a = NULL, $b = NULL, $c = NULL)
     {
         self::$instance->sql .= ' AND ' . $a . ' ' . $b . ' ' . $c;
+        return self::$instance;
     }
     public function or($a = NULL, $b = NULL, $c = NULL)
     {
         self::$instance->sql .= ' OR ' . $a . ' ' . $b . ' ' . $c;
+        return self::$instance;
     }
     public function in(array $a)
     {
         self::$instance->sql .= ' IN ( ' . implode(',', $a) . ' )';
+        return self::$instance;
     }
     public function not($a = NULL)
     {
         self::$instance->sql .= ' NOT ' . $a;
+        return self::$instance;
     }
     public function list($limit, $offset)
     {
         self::$instance->sql .= ' LIMIT ' . $limit . ' OFFSET ' . $offset;
+        return self::$instance;
     }
     public function __toString()
     {
