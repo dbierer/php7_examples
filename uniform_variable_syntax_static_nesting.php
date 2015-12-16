@@ -1,21 +1,23 @@
 <?php
+// TODO: stack up constants too?
 
 class Test
 {
-	public static $test = 'Static Property: Works in PHP7';
-	public static function baz()
-	{
-		return 'Static Method: Works in PHP7';
-	}
+    const SOMETHING = 'something';
+    public static $test = 'Static Property: Works in PHP7';
+    public static function baz()
+    {
+        return 'Static Method: Works in PHP7';
+    }
 }
 
 class Foo
 {
-	public static $test = 'Test';
-	public function bar()
-	{
-		return self::$test;
-	}
+    public static $test = 'Test';
+    public function bar()
+    {
+        return self::$test;
+    }
 }
 
 // works in PHP 5 or 7

@@ -16,4 +16,4 @@ class Foo
 $foo = new Foo();
 echo $foo->bar()()[3];
 // OR
-new Foo()->bar()()[3];
+(new Foo())->bar()()[3];
