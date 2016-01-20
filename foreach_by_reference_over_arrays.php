@@ -18,7 +18,7 @@ $a = [1, 2, 3, 4];
 // after modification, internal foreach() pointer is restored
 // same in PHP 5 and 7
 foreach ($a as $v) {
-    printf("%2d - %2d\n", $v, current($a));
+    printf("%2d -\n", $v);
     next($a);
     var_dump(current($a));
     echo PHP_EOL;
@@ -32,7 +32,7 @@ $a = [1, 2, 3];
 // deletion of the next element referred by foreach pointer leads to skipping it
 // same in PHP 5 and 7
 foreach($a as &$v) {
-    printf("%2d - %2d\n", $v, current($a));
+    printf("%2d -\n", $v);
     unset($a[1]);
 }
 
@@ -45,8 +45,8 @@ $a = [1, 2];
 // adding new elements after the current foreach pointer adds them to iteration
 // same in PHP 5 and 7
 foreach($a as &$v) {
-    printf("%2d - %2d\n", $v, current($a));
-    $a[] = 3;
+    printf("%2d -\n", $v);
+    $a[2] = 3;
 }
 
 echo PHP_EOL;
@@ -57,7 +57,7 @@ echo "----------------\n";
 // adds them to iteration as well (this didn't work in PHP5)
 $a = [1];
 foreach($a as &$v) {
-    printf("%2d - %2d\n", $v, current($a));
+    printf("%2d -\n", $v);
     $a[1]=2;
 }
 
