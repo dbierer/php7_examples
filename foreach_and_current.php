@@ -21,3 +21,32 @@ foreach ($a as $v) {
 	printf("%2d - %2d\n", $v, current($a));
 }
 
+/*
+ * X-Powered-By: PHP/5.5.30
+Content-type: text/html
+
+BEFORE assignment
+-----------------
+ 1 -  2
+ 2 -  2
+ 3 -  2
+
+AFTER assignment
+----------------
+ 1 -  1
+ 2 -  1
+ 3 -  1
+
+PHP 7.0
+* BEFORE assignment
+-----------------
+ 1 -  1
+ 2 -  1
+ 3 -  1
+
+AFTER assignment
+----------------
+ 1 -  1
+ 2 -  1
+ 3 -  1
+*/

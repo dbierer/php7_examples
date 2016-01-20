@@ -15,6 +15,7 @@ var_dump((int) '0x123' == (int) '291'); // FALSE
 echo PHP_EOL;
 
 // testing
+echo "\nThis is how you can test to see if it's a hex numeric string:\n";
 $hex = filter_var('0x123', FILTER_VALIDATE_INT, FILTER_FLAG_ALLOW_HEX);
 var_dump($hex);
 echo PHP_EOL;
@@ -26,3 +27,8 @@ if (!is_numeric($str)) {
 }
 echo PHP_EOL;
 
+// other examples from http://php.net/manual/en/migration70.incompatible.php
+echo 'var_dump("0xe" + "0x1")' . PHP_EOL;
+var_dump("0xe" + "0x1");
+echo 'var_dump(substr("foo", "0x1"))' . PHP_EOL;
+var_dump(substr("foo", "0x1"));

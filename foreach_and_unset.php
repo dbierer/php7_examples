@@ -24,3 +24,54 @@ foreach ($a as $v) {
 }
 var_dump($a);
 
+/*
+PHP 5.6
+BEFORE assignment
+-----------------
+ 1
+ 2
+ 3
+array(2) {
+  [0]=>
+  int(1)
+  [2]=>
+  int(3)
+}
+
+AFTER assignment
+----------------
+ 1
+ 3
+array(2) {
+  [0]=>
+  int(1)
+  [2]=>
+  int(3)
+}
+
+PHP 7.0
+BEFORE assignment
+-----------------
+ 1
+ 2
+ 3
+array(2) {
+  [0] =>
+  int(1)
+  [2] =>
+  int(3)
+}
+
+AFTER assignment
+----------------
+ 1
+ 2
+ 3
+array(2) {
+  [0] =>
+  int(1)
+  [2] =>
+  int(3)
+}
+*/
+
