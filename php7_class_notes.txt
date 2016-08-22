@@ -1,18 +1,9 @@
 PHP 7 NOTES
 
-NEW STUFF IN RC3
+NEW STUFF IN PHP 7.1
 ---------------------------------------------------------------------------------
-See: https://github.com/php/php-src/blob/php-7.0.0RC3/UPGRADING
-1. Globals: global_only_takes_simple_variable.php
-2. Changed functions: changed_functions*.php
-3. Changes in substr(): possible BC break!!! see: changed_functions_substr.php
-4. Context Sensitive Lexer
-   see: https://wiki.php.net/rfc/context_sensitive_lexer
-   context_sensitive_lexer*.php
-5. intdiv() and "%%" operator
-   see: http://php.net/manual/en/function.intdiv.php
-   intdiv_example.php
-   
+see: https://github.com/php/php-src/blob/php-7.1.0beta3/UPGRADING
+
 
 NOTES FROM CAL'S PRESENTATION
 ---------------------------------------------------------------------------------
@@ -31,7 +22,7 @@ RFC's
 -- TCP over Carrier Pigeon: https://www.ietf.org/rfc/rfc1149.txt
 -- https://wiki.php.net/rfc#php_70
 Auto-vivification
--- automatic creation of new arrays and hashes as required every time an undefined value is dereferenced. 
+-- automatic creation of new arrays and hashes as required every time an undefined value is dereferenced.
 Dereferencing
 -- indirection (?)
 -- obtaining a value
@@ -48,14 +39,14 @@ ZPP Failure on Overflow
 foreach behavior
 -- https://wiki.php.net/rfc/php7_foreach
 Dead / unmaintained extensions
-Dead SAPIs: 
+Dead SAPIs:
 • aolserver
 • apache		// NOTHING to do with PHP Apache Module!!!
 • apache_hooks
 • caudium
 • continuity
 • isapi
-• milter 
+• milter
 • phttpd
 • pi3web
 • roxen
@@ -64,10 +55,10 @@ Dead SAPIs:
 • webjames
 • apache2filter - not really dead, but currently broken
 • nsapi
-Extensions with unmaintained dependencies 
+Extensions with unmaintained dependencies
 • imap
 • mcrypt		// OLD mcrypt ... not the newer extension
-Extensions not yet ported to PHP7 
+Extensions not yet ported to PHP7
 • interbase
 • mssql
 • oci8
@@ -85,7 +76,7 @@ Moving phpng branch into master
 ---- HPHPc: "transpiler" for PHP (https://en.wikipedia.org/wiki/HipHop_for_PHP)
 ---- "hack" -- backward compatible version of PHP developed by Facebook
 ---- http://hacklang.org/
--- nearly 100% compatible and provides anywhere between 20% and 110% performance gains 
+-- nearly 100% compatible and provides anywhere between 20% and 110% performance gains
 -- Drupal shown on benchmark slide is version 7
 
 NOTES ON PHP7_CLASS.PDF
@@ -94,7 +85,7 @@ replaced "json" extension with "jsond"
 -- see: https://wiki.php.net/rfc/jsond
 -- old extension: old, no maintainer, not a free license
 -- benchmarks: https://github.com/bukka/php-jsond-bench/blob/master/reports/0001/summary.md
-        
+
 
 
 REF:  https://github.com/php/php-src/blob/php-7.0.0beta3/NEWS
@@ -127,11 +118,11 @@ CONSTANTS:
 
 PHP_INT_MIN
 DateTime::RFC3339_EXTENDED to output in RFC3339 Extended format which includes fraction of seconds
-    
+
 
 ***** IMPROVED ******************************************************************
 
-pcntl_wait() and pcntl_waitpid() -- Added rusage support        
+pcntl_wait() and pcntl_waitpid() -- Added rusage support
 NULL byte protection to exec, system and passthru
 unserialize() -- Added options parameter for  allowing to specify acceptable classes
 Closure::call() method
@@ -141,3 +132,42 @@ ZipArchive -- added setCompressionName() and setCompressionIndex() methods
 
 
 ***** REMOVED *******************************************************************
+
+RE: Removed SAPIs / not-yet-ported Extensions:
+----------------------------------------------
+(see: https://wiki.php.net/rfc/removal_of_dead_sapis_and_exts)
+
+RE: ext/pdo_oci and ext/oci8
+
+Dependency home: oracle.com
+Dependency debian supported: no
+Dependency last release: 2014
+Christopher Jones stated these extensions to be supported by Oracle. Oracle plans to maintains them further in the core.
+
+NOTE: These extensions was removed from the voting options, because they per the current info are going to be supported for PHP7 in the future.
+
+RE: ext/pdo_dblib
+
+Dependency home: sybase.com, microsoft.com
+Dependency debian supported: no
+Dependency last release: 2014
+
+4 voted to remove, 18 voted to let it remain
+
+RE: ext/mcrypt
+
+Dependency home: http://sourceforge.net/projects/mcrypt/
+Dependency debian supported: yes
+Dependency last release: 2007
+
+15 voted to remove, 18 voted to let it remain
+
+RE: ext/imap
+
+* Dependency home: http://www.washington.edu/imap/
+* Dependency debian supported: yes
+* Dependency last release: 2007
+
+14 voted to remove, 19 voted to let it remain
+
+To be accepted/declined each vote requires 50%+1 acceptance.

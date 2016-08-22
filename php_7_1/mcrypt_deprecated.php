@@ -17,8 +17,8 @@ echo "\nDecrypted using mcrypt_decrypt():\n$back\n";
 echo "\n----------------------------------------------------\n";
 echo "\nSame thing using OpenSSL:\n";
 
-$cipher = base64_encode(openssl_encrypt($text, 'aes-256-ctr', $key));
-$back   = openssl_decrypt(base64_decode($cipher), 'aes-256-ctr', $key);
+$cipher = base64_encode(openssl_encrypt($text, 'aes-256-ctr', $key, 0, substr($iv, 0, 16)));
+$back   = openssl_decrypt(base64_decode($cipher), 'aes-256-ctr', $key, 0, substr($iv, 0, 16));
 echo "\nText: \n$text\n";
 echo "\nEncrypted using openssl_encrypt():\n$cipher\n";
 echo "\nDecrypted using openssl_decrypt():\n$back\n";
