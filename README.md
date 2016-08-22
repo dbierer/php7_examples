@@ -41,3 +41,15 @@ iptables -I INPUT 2 -p tcp -m state --state NEW -m tcp --dport 7777 -j ACCEPT
 ```
 service iptables save
 ```
+
+##Manual PHP 7 Installation
+1. Download the target version
+2. cd to that directory
+3. Run these commands (assumes Linux, not logged in as root)
+```
+$ ./configure --with-pdo-mysql=/usr --with-pdo-pgsql=/usr --enable-calendar --with-curl=/usr/include/curl --with-openssl-dir=/usr --with-gettext=/usr --with-mhash=DIR --enable-intl --enable-mbstring --with-mcrypt=/usr --with-mysql-sock=/var/run/mysqld.sock --with-pdo-mysql=/usr --enable-zip --with-openssl=/usr --with-libxml-dir=/usr --with-libdir=/lib/x86_64-linux-gnu --enable-sockets --enable-libxml --enable-soap --with-gd --with-jpeg-dir=/usr --with-webp-dir=/usr --with-xpm-dir=/usr --with-png-dir=/usr --with-zlib-dir=/usr --with-freetype-dir=/usr --enable-gd-native-ttf
+$ make
+$ make test
+$ sudo make install
+```
+4. Puts PHP in /usr/local/bin/php
