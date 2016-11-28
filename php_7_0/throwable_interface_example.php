@@ -10,4 +10,11 @@ try {
 } catch (\Error $e) {
     echo "Error: {$e->getMessage()}\n";
 }
-    
+// Running PHP7: "Error: Call to a member function nope() on null"
+
+// Catch Throwable if you want to trap Exceptions or Errors
+try {
+    do_something(null);
+} catch (Throwable $e) {
+    echo get_class($e) . ': ' . $e->getMessage() . PHP_EOL;
+}

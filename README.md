@@ -47,7 +47,7 @@ service iptables save
 2. cd to that directory
 3. Run these commands (assumes Linux, not logged in as root)
 ```
-$ ./configure --with-pdo-mysql=/usr --with-pdo-pgsql=/usr --enable-calendar --with-curl=/usr/include/curl --with-openssl-dir=/usr --with-gettext=/usr --with-mhash=DIR --enable-intl --enable-mbstring --with-mcrypt=/usr --with-mysql-sock=/var/run/mysqld.sock --with-pdo-mysql=/usr --enable-zip --with-openssl=/usr --with-libxml-dir=/usr --with-libdir=/lib/x86_64-linux-gnu --enable-sockets --enable-libxml --enable-soap --with-gd --with-jpeg-dir=/usr --with-webp-dir=/usr --with-xpm-dir=/usr --with-png-dir=/usr --with-zlib-dir=/usr --with-freetype-dir=/usr --enable-gd-native-ttf
+$ ./configure --with-pdo-mysql=/usr --enable-calendar --with-curl=/usr/include/curl --with-openssl-dir=/usr --with-gettext=/usr --with-mhash=DIR --enable-intl --enable-mbstring --with-mcrypt=/usr --with-mysql-sock=/var/run/mysqld.sock --with-pdo-mysql=/usr --enable-zip --with-openssl=/usr --with-libxml-dir=/usr --with-libdir=/lib/x86_64-linux-gnu --enable-sockets --enable-libxml --enable-soap --with-gd --with-jpeg-dir=/usr --with-webp-dir=/usr --with-xpm-dir=/usr --with-png-dir=/usr --with-zlib-dir=/usr --with-freetype-dir=/usr --enable-gd-native-ttf --with-vpx-dir=/usr
 $ make
 $ make test
 $ sudo make install
