@@ -61,17 +61,17 @@ You can specify an installation prefix other than `/usr/local` using `--prefix`,
 
 ###Ubuntu 16.04 Installation:
 Libraries needed (given the "./configure" string above)
-sudo apt-get install libxml2-dev
-sudo apt-get install libssl-dev
-sudo apt-get install libcurl4-openssl-dev
-sudo apt-get install libwebp-dev
-sudo apt-get install libjpeg-dev
-sudo apt-get install libpng-dev
-sudo apt-get install libxpm-dev
-sudo apt-get install libfreetype6-dev
-sudo apt-get install libmcrypt-dev
-sudo apt-get install libmysqlclient-dev
-* Assumes MySQL has been installed *
+- sudo apt-get install libxml2-dev
+- sudo apt-get install libssl-dev
+- sudo apt-get install libcurl4-openssl-dev
+- sudo apt-get install libwebp-dev
+- sudo apt-get install libjpeg-dev
+- sudo apt-get install libpng-dev
+- sudo apt-get install libxpm-dev
+- sudo apt-get install libfreetype6-dev
+- sudo apt-get install libmcrypt-dev
+- sudo apt-get install libmysqlclient-dev
+* Assumes **MySQL** has been installed
 
 ###Redhat / Fedory Installation:
 See: https://crybit.com/20-common-php-compilation-errors-and-fix-unix/
