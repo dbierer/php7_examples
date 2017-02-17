@@ -47,9 +47,32 @@ service iptables save
 2. cd to that directory
 3. Run these commands (assumes Linux, not logged in as root)
 ```
-$ ./configure --with-pdo-mysql=/usr --enable-calendar --with-curl=/usr/include/curl --with-openssl-dir=/usr --with-gettext=/usr --with-mhash=DIR --enable-intl --enable-mbstring --with-mcrypt=/usr --with-mysql-sock=/var/run/mysqld.sock --with-pdo-mysql=/usr --enable-zip --with-openssl=/usr --with-libxml-dir=/usr --with-libdir=/lib/x86_64-linux-gnu --enable-sockets --enable-libxml --enable-soap --with-gd --with-jpeg-dir=/usr --with-webp-dir=/usr --with-xpm-dir=/usr --with-png-dir=/usr --with-zlib-dir=/usr --with-freetype-dir=/usr --enable-gd-native-ttf --with-vpx-dir=/usr
+$./configure --with-pdo-mysql=/usr --enable-calendar --with-curl=/usr/include/curl --with-openssl --with-gettext=/usr --with-mhash=DIR --enable-intl --enable-mbstring --with-mcrypt=/usr --with-mysql-sock=/var/run/mysqld.sock --with-pdo-mysql=/usr --enable-zip --with-openssl=/usr --with-libxml-dir=/usr --with-libdir=/lib/x86_64-linux-gnu --enable-sockets --enable-libxml --enable-soap --with-gd --with-jpeg-dir=/usr --with-webp-dir=/usr --with-xpm-dir=/usr --with-png-dir=/usr --with-zlib-dir=/usr --with-freetype-dir=/usr --enable-gd-native-ttf
 $ make
 $ make test
 $ sudo make install
 ```
-4. Puts PHP in /usr/local/bin/php
+
+By default, `make install` will install all the files in `/usr/local/bin`, `/usr/local/lib` etc.  
+You can specify an installation prefix other than `/usr/local` using `--prefix`, for instance 
+```
+--prefix=$HOME
+```
+
+###Ubuntu 16.04 Installation:
+Libraries needed (given the "./configure" string above)
+sudo apt-get install libxml2-dev
+sudo apt-get install libssl-dev
+sudo apt-get install libcurl4-openssl-dev
+sudo apt-get install libwebp-dev
+sudo apt-get install libjpeg-dev
+sudo apt-get install libpng-dev
+sudo apt-get install libxpm-dev
+sudo apt-get install libfreetype6-dev
+sudo apt-get install libmcrypt-dev
+sudo apt-get install libmysqlclient-dev
+* Assumes MySQL has been installed *
+
+###Redhat / Fedory Installation:
+See: https://crybit.com/20-common-php-compilation-errors-and-fix-unix/
+
