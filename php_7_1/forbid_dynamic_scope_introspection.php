@@ -47,3 +47,15 @@ namespace Whatever {
     echo '</pre>' . PHP_EOL;
 }
 
+// full list of functions affected:
+/*
+    assert() - with a string as the first argument
+    compact()
+    extract()
+    func_get_args()
+    func_get_arg()
+    func_num_args()
+    get_defined_vars()
+    mb_parse_str() - with one arg
+    parse_str() - with one arg
+*/

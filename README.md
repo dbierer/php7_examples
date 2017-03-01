@@ -71,6 +71,7 @@ Libraries needed (given the "./configure" string above)
 - sudo apt-get install libfreetype6-dev
 - sudo apt-get install libmcrypt-dev
 - sudo apt-get install libmysqlclient-dev
+- sudo apt-get install libvpx-dev
 * Assumes **MySQL** has been installed
 
 ###Redhat / Fedory Installation:

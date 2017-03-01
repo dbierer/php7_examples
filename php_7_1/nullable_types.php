@@ -1,4 +1,5 @@
 <?php
+// see: https://wiki.php.net/rfc/nullable_types
 // "?" before data type == that data type + NULL permitted
 function answer1(): ?int  {
     return null; //ok
