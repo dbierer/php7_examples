@@ -1,0 +1,6 @@
+.buildpath
+.idea/
+.project
+.settings/
+deployment.properties
+deployment.xml
