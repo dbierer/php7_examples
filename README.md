@@ -1,5 +1,8 @@
 ##CODE EXAMPLES USAGE:
 
+You can run the code examples by using either PHP's built-in web server or Docker containers.
+
+###PHP built-in web server
 1. Install *both* PHP 5.6 and PHP 7 on a VM
 2. Create a symlink /usr/bin/php5 to the php 5.6 install
 3. Create a symlink /usr/bin/php7 to the php 7.0 install
@@ -8,13 +11,54 @@
 6. In the 1st: php5 -S ip_address:5555
 7. In the 2nd: php7 -S ip_address:7777
 
+###Docker containers
+Prerequisite :
+- the docker-engine must be installed on your computer/VM (ex. [Docker Installation on Debian](https://docs.docker.com/engine/installation/linux/debian/))
+
+Run the containers :
+- With a gnome-terminal (Linux/Gnome) :
+    1. cd to the code examples directory
+    2. run the main BASH script in a gnome-terminal window :
+```
+$ cd php7_examples
+$ ./php7_docker.bash
+```
+
+- Without a gnome-terminal (Linux/KDE, Windows/MinGW, Mac) :
+    1. cd to the docs/dockerfiles subdirectory of the code examples directory
+    2. run the three scripts that are located in this subdirectory in three different BASH shell windows :
+
+BASH window #1 :
+```
+$ cd php7_examples/docs/dockerfiles
+$ ./run-5.6.28.bash
+```
+BASH window #2 :
+```
+$ cd php7_examples/docs/dockerfiles
+$ ./run-7.0.13.bash
+```
+BASH window #3 :
+```
+$ cd php7_examples/docs/dockerfiles
+$ ./run-7.1.1.bash
+```
+
+To stop the containers, just type 'exit' and press enter in each terminal window.
+
 ##FROM YOUR BROWSER:
 
 1. Open a new tab
 2. Go to ip_address:5555
 3. Open a new tab
 4. Go to ip_address:7777
-5. Now you can demo the results of the same code in both PHP 5.x and PHP 7
+
+In addition, if you are using the Docker containers :
+5. Open a new tab
+6. Go to ip_address:9999
+
+
+7. Now you can demo the results of the same code in both PHP 5.x and PHP 7 (and PHP 7.1 if you are using Docker)
 
 ##OPEN PORTS 5555 and 7777 in Fedora:
 
