@@ -21,27 +21,27 @@ Run the containers :
     2. run the main BASH script in a gnome-terminal window :
 ```
 $ cd php7_examples
-$ ./php7_docker.bash
+$ ./docker_run.bash
 ```
 
 - Without a gnome-terminal (Linux/KDE, Windows/MinGW, Mac) :
-    1. cd to the docs/dockerfiles subdirectory of the code examples directory
+    1. cd to the docs/docker subdirectory of the code examples directory
     2. run the three scripts that are located in this subdirectory in three different BASH shell windows :
 
 BASH window #1 :
 ```
-$ cd php7_examples/docs/dockerfiles
-$ ./run-5.6.28.bash
+$ cd php7_examples/docs/docker
+$ ./run-5.6.bash
 ```
 BASH window #2 :
 ```
-$ cd php7_examples/docs/dockerfiles
-$ ./run-7.0.13.bash
+$ cd php7_examples/docs/docker
+$ ./run-7.0.bash
 ```
 BASH window #3 :
 ```
-$ cd php7_examples/docs/dockerfiles
-$ ./run-7.1.1.bash
+$ cd php7_examples/docs/docker
+$ ./run-7.1.bash
 ```
 
 To stop the containers, just type 'exit' and press enter in each terminal window.

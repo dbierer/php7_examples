@@ -5,5 +5,5 @@ docker run --rm -it \
   -p 10444:443 \
   -p 13307:3306 \
   -p 10023:22 \
-  andrewscaya/debian-xampp-7.0.13 \
-  /www/docs/dockerfiles/bin/xampp-deploy.bash run
+  asclinux/unlikelysource-php-7.0.10 \
+  /www/docs/docker/bin/deploy.bash run
