@@ -1,8 +1,8 @@
-##CODE EXAMPLES USAGE:
+## CODE EXAMPLES USAGE:
 
 You can run the code examples by using either PHP's built-in web server or Docker containers.
 
-###PHP built-in web server
+### PHP built-in web server
 1. Install *both* PHP 5.6 and PHP 7 on a VM
 2. Create a symlink /usr/bin/php5 to the php 5.6 install
 3. Create a symlink /usr/bin/php7 to the php 7.0 install
@@ -11,7 +11,7 @@ You can run the code examples by using either PHP's built-in web server or Docke
 6. In the 1st: php5 -S ip_address:5555
 7. In the 2nd: php7 -S ip_address:7777
 
-###Docker containers
+### Docker containers
 Prerequisite :
 - the docker-engine must be installed on your computer/VM (ex. [Docker Installation on Debian](https://docs.docker.com/engine/installation/linux/debian/))
 
@@ -46,7 +46,7 @@ $ ./run-7.1.bash
 
 To stop the containers, just type 'exit' and press enter in each terminal window.
 
-##FROM YOUR BROWSER:
+## FROM YOUR BROWSER:
 
 1. Open a new tab
 2. Go to ip_address:5555
@@ -54,13 +54,12 @@ To stop the containers, just type 'exit' and press enter in each terminal window
 4. Go to ip_address:7777
 
 In addition, if you are using the Docker containers :
+
 5. Open a new tab
 6. Go to ip_address:9999
-
-
 7. Now you can demo the results of the same code in both PHP 5.x and PHP 7 (and PHP 7.1 if you are using Docker)
 
-##OPEN PORTS 5555 and 7777 in Fedora:
+## OPEN PORTS 5555 and 7777 in Fedora:
 
 ```
 firewall-cmd --zone=public --add-port=5555/tcp --permanent
@@ -68,7 +67,7 @@ firewall-cmd --zone=public --add-port=7777/tcp --permanent
 firewall-cmd --reload
 ```
 
-##OPEN PORTS 5555 and 7777 using iptables:
+## OPEN PORTS 5555 and 7777 using iptables:
 
 1. find line numbers:
 ```
@@ -86,7 +85,7 @@ iptables -I INPUT 2 -p tcp -m state --state NEW -m tcp --dport 7777 -j ACCEPT
 service iptables save
 ```
 
-##Manual PHP 7 Installation
+## Manual PHP 7 Installation
 1. Download the target version
 2. cd to that directory
 3. Run these commands (assumes Linux, not logged in as root)
@@ -103,7 +102,7 @@ You can specify an installation prefix other than `/usr/local` using `--prefix`,
 --prefix=$HOME
 ```
 
-###Ubuntu 16.04 Installation:
+### Ubuntu 16.04 Installation:
 Libraries needed (given the "./configure" string above)
 - sudo apt-get install libxml2-dev
 - sudo apt-get install libssl-dev
@@ -118,6 +117,6 @@ Libraries needed (given the "./configure" string above)
 - sudo apt-get install libvpx-dev
 * Assumes **MySQL** has been installed
 
-###Redhat / Fedory Installation:
+### Redhat / Fedory Installation:
 See: https://crybit.com/20-common-php-compilation-errors-and-fix-unix/
 
