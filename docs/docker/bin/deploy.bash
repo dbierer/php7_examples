@@ -2,7 +2,7 @@
 cd /srv
 mv www www.OLD
 ln -s /www .
-sed -i 's/Require all granted/Require all granted\n    DirectoryIndex index.php/' /etc/httpd/httpd.conf
+sed -i 's/DirectoryIndex index.html/DirectoryIndex index.php index.html/' /etc/httpd/httpd.conf
 /etc/init.d/mysql start
 /etc/init.d/php-fpm start
 /etc/init.d/httpd start
