@@ -12,44 +12,24 @@ You can run the code examples by using either PHP's built-in web server or Docke
 7. In the 2nd: php7 -S ip_address:7070
 
 ### Docker containers
-Prerequisite :
+Prerequisites :
 - the docker-engine must be installed on your computer/VM (ex. [Docker Installation on Debian](https://docs.docker.com/engine/installation/linux/debian/))
+- [Composer](https://getcomposer.org) must be installed
 
-Run the containers :
-- With a gnome-terminal (Linux/Gnome) :
-    1. cd to the code examples directory
-    2. run the main BASH script in a gnome-terminal window :
+To run the containers :
 ```
-$ cd php7_examples
-$ ./docker_run.bash
+$ php composer.phar install
+$ php vendor/bin/linuxforcomposer.phar docker:run start
 ```
 
-- Without a gnome-terminal (Linux/KDE, Windows/MinGW, Mac) :
-    1. cd to the docs/docker subdirectory of the code examples directory
-    2. run the four scripts that are located in this subdirectory in four different BASH shell windows :
-
-BASH window #1 :
+To stop the containers :
 ```
-$ cd php7_examples/docs/docker
-$ ./run-5.6.bash
-```
-BASH window #2 :
-```
-$ cd php7_examples/docs/docker
-$ ./run-7.0.bash
-```
-BASH window #3 :
-```
-$ cd php7_examples/docs/docker
-$ ./run-7.1.bash
-```
-BASH window #4 :
-```
-$ cd php7_examples/docs/docker
-$ ./run-7.2.bash
+$ php vendor/bin/linuxforcomposer.phar docker:run stop
 ```
 
-To stop the containers, just type 'exit' and press enter in each terminal window.
+NOTE: On Windows, please use the Linux for Composer PHAR file in the 'vendor/linuxforphp/linuxforcomposer/bin' folder
+and replace the '${PWD}' environment variable with the full path to this working directory in the 'volumes' section of
+the 'linuxforcomposer.json' file (ex. '/c/Users/php7_examples:/srv/www').
 
 ## FROM YOUR BROWSER:
 
