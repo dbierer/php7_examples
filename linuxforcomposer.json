@@ -23,6 +23,6 @@
     "volumes": {
         "volume1": "${PWD}/:/srv/www"
     },
-    "script": "'bash -c \"lfphp --mysql --phpfpm --apache\"'",
+    "script": "\"lfphp --mysql --phpfpm --apache\"",
     "thread-safe": "false"
 }

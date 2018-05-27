@@ -13,7 +13,7 @@ You can run the code examples by using either PHP's built-in web server or Docke
 
 ### Docker containers
 Prerequisites :
-- the docker-engine must be installed on your computer/VM (ex. [Docker Installation on Debian](https://docs.docker.com/engine/installation/linux/debian/))
+- [Docker](https://docs.docker.com/install/) must be installed on your computer/VM
 - [Composer](https://getcomposer.org) must be installed
 
 To run the containers :
